@@ -4,7 +4,7 @@ function Header() {
   return (
     <>
     <header id='header'>
-    <h1>React Investment Calculator</h1>
+    <h1>React Investment Calculator .</h1>
     <img src={logo} />
     </header>
     </>
