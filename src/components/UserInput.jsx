@@ -5,18 +5,17 @@ function UserInput({onChange, userInput}) {
     
     UserInput.propTypes = {
         userInput: PropTypes.shape({
-            initialInvestment: PropTypes.number.isRequired,
-            annualInvestment: PropTypes.number.isRequired,
-            expectedReturn: PropTypes.number.isRequired,
-            duration: PropTypes.number.isRequired
-        }).isRequired,
-        onChange: PropTypes.func.isRequired,
+            initialInvestment: PropTypes.number,
+            annualInvestment: PropTypes.number,
+            expectedReturn: PropTypes.number,
+            duration: PropTypes.number
+        }),
+        onChange: PropTypes.func,
     };
 
   return (
     <>
         <section id="user-input">
-
           <div className="input-group">
             <p>
             <label >Initial Investment</label>
@@ -43,7 +42,7 @@ function UserInput({onChange, userInput}) {
          
             <div className="input-group">
                 <p>
-                <label >Duration</label>
+                <label >Duration (Years)</label>
                 <input type="number" defaultValue ={userInput.duration}
                        onChange ={(event) => onChange('duration', event.target.value)} required/>
                 </p>
